@@ -1866,3 +1866,18 @@ textarea.form-input::-webkit-resizer { display: none; }
 .about-text a {
   white-space: nowrap;
 }
+/* ==== ESTILOS PERSONALIZADOS PARA EL CHATBOT (Dialogflow) ==== */
+df-messenger {
+  --df-messenger-button-titlebar-color: #0a192f; /* Color del encabezado */
+  --df-messenger-button-titlebar-font-color: white; /* Color del texto del encabezado */
+  --df-messenger-button-titlebar-icon-color: white; /* Icono del botón */
+  --df-messenger-chat-background-color: #f9f9f9; /* Fondo del chat */
+  --df-messenger-font-color: #333; /* Color del texto */
+  --df-messenger-send-icon: #0a192f; /* Color del botón de enviar */
+  --df-messenger-input-box-color: #fff; /* Color de fondo del input */
+}
+
+df-messenger::part(chat-open-button) {
+  bottom: 20px;
+  right: 20px;
+}

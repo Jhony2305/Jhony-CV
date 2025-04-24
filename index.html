@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head> 
-  <link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#0a192f">
-<meta name="mobile-web-app-capable" content="yes" />
-
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jhony Díaz - Desarrollador de Software</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0a192f">
+  <meta name="mobile-web-app-capable" content="yes" />
 
   <!-- SEO -->
   <meta name="description" content="Currículum de Jhony Alexander Díaz Vásquez, tecnólogo en desarrollo de software con experiencia en diseño web, soporte técnico y administración de sistemas." />
@@ -21,14 +21,14 @@
   <!-- Favicon -->
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon" />
 
-  <!-- Open Graph / Facebook / WhatsApp -->
+  <!-- Open Graph (Facebook / WhatsApp) -->
   <meta property="og:title" content="Curriculum - Jhony Díaz" />
   <meta property="og:description" content="Portafolio web de Jhony Alexander Díaz Vásquez, tecnólogo en desarrollo de software con experiencia en diseño web y desarrollo full-stack." />
   <meta property="og:image" content="https://jhony-cv.vercel.app/assets/images/og-image.png" />
   <meta property="og:url" content="https://jhony-cv.vercel.app" />
   <meta property="og:type" content="website" />
 
-  <!-- Twitter Card -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Jhony Díaz - Desarrollador de Software" />
   <meta name="twitter:description" content="Portafolio y currículum de Jhony Alexander Díaz Vásquez, especialista en desarrollo web y soporte técnico." />
@@ -41,7 +41,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Chatbot Dialogflow (si ya lo tienes configurado) -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="BotCVJhony"
+    agent-id="63678a96-1f85-4720-b29c-977efe7af052"
+    language-code="es">
+  </df-messenger>
 </head>
+
 
 
 
@@ -608,15 +618,7 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-   
-  <!-- Chatbot Dialogflow Messenger -->
-   <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-   <df-messenger
-     intent="WELCOME"
-     chat-title="BotCVJhony"
-     agent-id="63678a96-1f85-4720-b29c-977efe7af052"
-     language-code="es"
-   ></df-messenger>
+  
 
    
 
