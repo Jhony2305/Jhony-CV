@@ -5,7 +5,7 @@ const elementToggleFunc = function (elem) {
   elem.classList.toggle("active");
 };
 
-// sidebar variables
+// sidebar
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
@@ -15,7 +15,7 @@ if (sidebar && sidebarBtn) {
   });
 }
 
-// testimonials variables
+// testimonials
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
@@ -46,7 +46,7 @@ if (modalCloseBtn && overlay) {
   overlay.addEventListener("click", testimonialsModalFunc);
 }
 
-// SAFE SELECT & FILTER SECTION
+// select & filter
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-selecct-value]");
@@ -111,16 +111,14 @@ if (form) {
   }
 
   form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Evita la redirección
+    event.preventDefault();
 
     const formData = new FormData(form);
 
     fetch(form.action, {
       method: "POST",
       body: formData,
-      headers: {
-        Accept: "application/json"
-      }
+      headers: { Accept: "application/json" }
     })
       .then(response => {
         if (response.ok) {
@@ -132,7 +130,20 @@ if (form) {
           success.style.color = "#4BB543";
           success.style.marginTop = "1rem";
           success.style.fontWeight = "600";
+          success.style.opacity = "0";
+          success.style.transition = "opacity 0.5s ease";
           form.parentNode.appendChild(success);
+
+          // Fade in
+          setTimeout(() => {
+            success.style.opacity = "1";
+          }, 100);
+
+          // Auto hide after 5 seconds
+          setTimeout(() => {
+            success.style.opacity = "0";
+            setTimeout(() => success.remove(), 500);
+          }, 5000);
         } else {
           alert("❌ Error al enviar. Intenta nuevamente.");
         }
