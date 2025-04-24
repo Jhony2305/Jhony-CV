@@ -1,0 +1,5 @@
+# robots.txt para https://jhony-cv.vercel.app
+
+User-agent: *
+Allow: /
+Sitemap: https://jhony-cv.vercel.app/sitemap.xml
