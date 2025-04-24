@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>curriculum - Jhony Díaz</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+              <!--
+      - datos personales foto y nombre 
+    -->
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Jhony Díaz" width="80">
+        </figure>
+      
+        <div class="info-content">
+          <h1 class="name" title="Jhony Díaz">Jhony Alexander <br> Díaz Vásquez</h1>
+          <p class="title">Desarrollador de Software</p>
+        </div>
+      
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Mostrar contacto</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      
+      </div>
+      <!--
+      - fin de datos personales
+    -->
+     <!--
+      -  Email Telefono Fechas Direccion
+    -->
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+      
+        <ul class="contacts-list">
+      
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:Jjhony.diaz.dev@gmail.com" class="contact-link">jhony.diaz.dev@gmail.com</a>
+            </div>
+          </li>
+      
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Teléfono</p>
+              <a href="tel:+593992382355" class="contact-link">0992382355<br>+593 99 238 2355</a>
+            </div>
+          </li>
+      
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Nacimiento</p>
+              <time datetime="1995-12-24">24 de diciembre, 1995</time>
+            </div>
+          </li>
+      
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Ubicación</p>
+              <address>Barrio Santa Teresita Alta, Pomasqui, Ecuador</address>
+            </div>
+          </li>
+      
+        </ul>
+      
+        <div class="separator"></div>
+      
+        <ul class="social-list">
+      
+          <li class="social-item">
+            <a href="https://www.facebook.com/JADVtech" class="social-link" target="_blank">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+      
+          <li class="social-item">
+            <a href="https://www.instagram.com/jadvtech" class="social-link" target="_blank">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+      
+      
+        </ul>
+      
+      </div>
+      <!--
+      -  Email Telefono Fechas Direccion
+    -->
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+      
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link>Sobre mí</button>
+          </li>
+      
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resumen</button>
+          </li>
+      
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contacto</button>
+          </li>
+      
+        </ul>
+      
+      </nav>
+      
+    <!--
+        - Fin NAVBAR
+      -->
+
+      <!--
+        - Sobre mi o about me
+      -->
+
+      <article class="about active" data-page="sobre mí">
+
+        <header>
+          <h2 class="h2 article-title">Sobre mí</h2>
+        </header>
+      
+        <section class="about-text">
+          <p>
+            Soy <strong>Jhony Díaz</strong>, Tecnólogo en Desarrollo de Software con más de 4 años de experiencia en diseño web, soporte técnico y administración de sistemas. A lo largo de mi carrera he desarrollado proyectos aplicando metodologías ágiles como <strong>Scrum</strong>, lo que me permite organizar y entregar soluciones de manera eficiente y colaborativa.
+          </p>
+          <p>
+            Domino tecnologías como <strong>HTML, CSS, Bootstrap, MySQL</strong>, así como lenguajes y frameworks como <strong>Laravel, React</strong> y <strong>Python</strong>, que utilizo para crear aplicaciones web dinámicas, adaptativas y centradas en la experiencia del usuario.
+          </p>
+          <p>
+            Además, administro mi propia página web <a href="https://www.jadvtech.com" target="_blank">www.jadvtech.com</a> desde donde gestiono proyectos de desarrollo web y servicios tecnológicos personalizados, integrando mis conocimientos técnicos con una visión estratégica orientada al cliente.
+          </p>       
+          <p>
+            Mi propósito es seguir aportando valor al sector tecnológico, desarrollando soluciones funcionales que contribuyan al crecimiento digital de las empresas.
+          </p>
+        </section>
+        
+      
+        <!-- Servicios -->
+        <section class="service">
+          <h3 class="h3 service-title">Lo que hago</h3>
+          <ul class="service-list">
+      
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="icono diseño" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Diseño Web</h4>
+                <p class="service-item-text">Diseños modernos, responsivos y optimizados para cualquier dispositivo.</p>
+              </div>
+            </li>
+      
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="icono desarrollo" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Desarrollo Web</h4>
+                <p class="service-item-text">Programación y desarrollo utilizando tecnologías actuales.</p>
+              </div>
+            </li>
+      
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="icono soporte" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Soporte Técnico</h4>
+                <p class="service-item-text">Mantenimiento preventivo y correctivo de sistemas y redes.</p>
+              </div>
+            </li>
+      
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="icono cliente" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Atención al Cliente</h4>
+                <p class="service-item-text">Resolución eficaz de problemas y orientación técnica al usuario.</p>
+              </div>
+            </li>
+      
+          </ul>
+        </section>
+      
+        <!-- Testimonios -->
+        <section class="testimonials">
+          <h3 class="h3 testimonials-title">Testimonios</h3>
+      
+          <ul class="testimonials-list has-scrollbar">
+      
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Cliente 1" width="60" data-testimonials-avatar>
+                </figure>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Carlos Pérez</h4>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Jhony trabajó en el rediseño de nuestra página web institucional. Su compromiso y calidad de trabajo superaron nuestras expectativas.
+                  </p>
+                </div>
+              </div>
+            </li>
+      
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-2.png" alt="Cliente 2" width="60" data-testimonials-avatar>
+                </figure>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>María González</h4>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Excelente servicio técnico. Jhony solucionó rápidamente problemas críticos en nuestros sistemas sin afectar la operación.
+                  </p>
+                </div>
+              </div>
+            </li>
+      
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-3.png" alt="Cliente 3" width="60" data-testimonials-avatar>
+                </figure>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Ana Castillo</h4>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Muy profesional y dedicado. Recomiendo a Jhony para cualquier proyecto de desarrollo o soporte web.
+                  </p>
+                </div>
+              </div>
+            </li>
+      
+          </ul>
+        </section>
+      
+        <!-- Modal de testimonios -->
+        <div class="modal-container" data-modal-container>
+          <div class="overlay" data-overlay></div>
+          <section class="testimonials-modal">
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Testimonio" width="80" data-modal-img>
+              </figure>
+              <img src="./assets/images/icon-quote.svg" alt="icono cita">
+            </div>
+            <div class="modal-content">
+              <h4 class="h3 modal-title" data-modal-title>Nombre</h4>
+              <time datetime="2025-01-01">1 enero, 2025</time>
+              <div data-modal-text>
+                <p>
+                  Texto del testimonio mostrado al hacer clic. Este contenido será reemplazado dinámicamente.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      
+      </article>
+    
+<!--
+        - fin sobre fi 
+      -->
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resumen" data-page="resumen">
+
+        <header>
+          <h2 class="h2 article-title">Resumen</h2>
+        </header>
+      
+        <!-- Formación -->
+        <section class="timeline">
+      
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Formación académica</h3>
+          </div>
+      
+          <ol class="timeline-list">
+      
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Tecnólogo en Desarrollo de Software</h4>
+              <span>Instituto Tecnológico Superior Japón – En curso</span>
+              <p class="timeline-text">
+                Formación enfocada en diseño, creación, implementación y soporte de software, incluyendo el desarrollo web y bases de datos.
+              </p>
+            </li>
+      
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Administración de Sistemas</h4>
+              <span>Colegio Nacional Mixto Pomasqui</span>
+              <p class="timeline-text">
+                Formación técnica en informática aplicada, gestión de redes y mantenimiento de equipos.
+              </p>
+            </li>
+      
+          </ol>
+      
+        </section>
+      
+        <!-- Experiencia -->
+        <section class="timeline">
+      
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Experiencia laboral</h3>
+          </div>
+      
+          <ol class="timeline-list">
+      
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Diseñador Web HTML</h4>
+              <span>Nexso Studio</span>
+              <p class="timeline-text">
+                Creación de páginas web responsivas utilizando HTML y CSS. Adaptación de interfaces y estructuras visuales.
+              </p>
+            </li>
+      
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Técnico de soporte y atención al cliente</h4>
+              <span>CYBER</span>
+              <p class="timeline-text">
+                Instalación y mantenimiento de equipos, soporte en software y hardware, asesoría personalizada al usuario.
+              </p>
+            </li>
+      
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Asesor comercial / Prácticas preprofesionales</h4>
+              <span>Praxis</span>
+              <p class="timeline-text">
+                Atención al cliente y asesoría en la venta de soluciones tecnológicas adaptadas a las necesidades del usuario. <br>
+                Además, realicé mis prácticas preprofesionales en el área de desarrollo de software, participando en el diseño y desarrollo de páginas web para la organización.
+              </p>
+            </li>
+            
+      
+          </ol>
+      
+        </section>
+      
+        <!-- Habilidades -->
+        <section class="skill">
+          <h3 class="h3 skills-title">Habilidades</h3>
+        
+          <ul class="skills-list content-card">
+        
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">HTML / CSS / Bootstrap</h5>
+                <data value="90">90%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </li>
+        
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Bases de datos</h5>
+                <data value="70">70%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+            </li>
+        
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Java</h5>
+                <data value="60">60%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%;"></div>
+              </div>
+            </li>
+        
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Atención al cliente</h5>
+                <data value="85">85%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+            </li>
+        
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Node.js</h5>
+                <data value="50">50%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+            </li>
+        
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">React</h5>
+                <data value="50">50%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+            </li>
+        
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Laravel</h5>
+                <data value="50">50%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+            </li>
+        
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">WordPress</h5>
+                <data value="75">75%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+            </li>
+        
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Wix</h5>
+                <data value="75">75%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+            </li>
+        
+          </ul>
+        </section>
+        
+        
+      
+      </article>
+      
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contacto" data-page="contacto">
+
+        <header>
+          <h2 class="h2 article-title">Contacto</h2>
+        </header>
+      
+        <!-- Mapa de Pomasqui, Ecuador -->
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15938.511812319647!2d-78.47326792382957!3d-0.04891751267600647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a18b75e7e3b%3A0x3e2e2c9e8fd15267!2sPomasqui%2C%20Quito!5e0!3m2!1ses!2sec!4v1685134777445!5m2!1ses!2sec"
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </figure>
+        </section>
+      
+        <!-- Formulario de contacto -->
+        <section class="contact-form">
+          <h3 class="h3 form-title">Formulario de contacto</h3>
+      
+          <form action="https://formspree.io/f/xwpokano" method="POST" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Nombre completo" required>
+              <input type="email" name="email" class="form-input" placeholder="Correo electrónico" required>
+            </div>
+          
+            <textarea name="message" class="form-input" placeholder="Tu mensaje" required></textarea>
+          
+            <button class="form-btn" type="submit">
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Enviar mensaje</span>
+            </button>
+          
+          </form>
+          
+        </section>
+      
+      </article>
+      
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

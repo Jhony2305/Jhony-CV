@@ -1,0 +1,20 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Configuración de editores
+.vscode/
+.idea/
+
+# Carpetas temporales
+*.log
+*.zip
+
+# Vercel
+.vercel/
+
+# Node.js (si luego agregas backend)
+node_modules/
+
+# Archivos de entorno (por si usas claves privadas en el futuro)
+.env
