@@ -129,13 +129,8 @@ if (dualForm) {
 
           // WhatsApp
           const numeroWhatsApp = "593992382355";
-          const texto = `Hola, soy ${name} 👋
-
-📧 Correo: ${email}
-
-📝 Mensaje:
-${message}`;
-          const enlace = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
+          const textoWhatsApp = `Hola, soy ${name} 👋\n\n📧 Correo: ${email}\n\n📝 Mensaje:\n${message}`;
+          const enlace = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(textoWhatsApp)}`;
           window.open(enlace, "_blank");
         } else {
           alert("❌ Error al enviar. Intenta nuevamente.");
