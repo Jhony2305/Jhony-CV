@@ -141,11 +141,12 @@ if (dualForm) {
           }, 5000);
 
           // WhatsApp
-          const numeroWhatsApp = "593992382355";
-          const texto = `Hola, soy *${name}* (%0A📧 ${email}) y quiero decir: %0A%0A${message}`;
-          const enlace = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
-          console.log("Abriendo WhatsApp:", enlace);
-          window.open(enlace, "_blank");
+          
+              const numeroWhatsApp = "593992382355";
+              const texto = `Hola, soy ${name} 👋\\n\\n📧 Correo: ${email}\\n\\n📝 Mensaje:\\n${message}`;
+              const enlace = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
+               window.open(enlace, "_blank");
+
         } else {
           alert("❌ Error al enviar. Intenta nuevamente.");
         }
