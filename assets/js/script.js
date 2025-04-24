@@ -109,6 +109,38 @@ if (form) {
       }
     });
   }
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Evita la redirección
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json"
+      }
+    })
+      .then(response => {
+        if (response.ok) {
+          form.reset();
+          if (formBtn) formBtn.setAttribute("disabled", "true");
+
+          const success = document.createElement("p");
+          success.textContent = "✅ ¡Mensaje enviado con éxito!";
+          success.style.color = "#4BB543";
+          success.style.marginTop = "1rem";
+          success.style.fontWeight = "600";
+          form.parentNode.appendChild(success);
+        } else {
+          alert("❌ Error al enviar. Intenta nuevamente.");
+        }
+      })
+      .catch(() => {
+        alert("❌ Error de conexión. Revisa tu red.");
+      });
+  });
 }
 
 // page navigation
