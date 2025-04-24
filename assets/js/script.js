@@ -94,36 +94,33 @@ if (select && selectValue) {
   }
 }
 
-// contact form
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
+// FORMULARIO: FORM + WHATSAPP + CONSOLE LOG DEBUG
+const dualForm = document.getElementById("dual-form");
 
-if (form) {
-  for (let i = 0; i < formInputs.length; i++) {
-    formInputs[i].addEventListener("input", function () {
-      if (form.checkValidity()) {
-        formBtn.removeAttribute("disabled");
-      } else {
-        formBtn.setAttribute("disabled", "");
-      }
-    });
-  }
+if (dualForm) {
+  dualForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-    const formData = new FormData(form);
+    const formData = new FormData(dualForm);
 
-    fetch(form.action, {
+    console.log("Formulario activado");
+    console.log("Nombre:", name);
+    console.log("Email:", email);
+    console.log("Mensaje:", message);
+
+    // Enviar a Formspree
+    fetch(dualForm.action, {
       method: "POST",
       body: formData,
       headers: { Accept: "application/json" }
     })
       .then(response => {
         if (response.ok) {
-          form.reset();
-          if (formBtn) formBtn.setAttribute("disabled", "true");
+          dualForm.reset();
 
           const success = document.createElement("p");
           success.textContent = "✅ ¡Mensaje enviado con éxito!";
@@ -132,18 +129,23 @@ if (form) {
           success.style.fontWeight = "600";
           success.style.opacity = "0";
           success.style.transition = "opacity 0.5s ease";
-          form.parentNode.appendChild(success);
+          dualForm.parentNode.appendChild(success);
 
-          // Fade in
           setTimeout(() => {
             success.style.opacity = "1";
           }, 100);
 
-          // Auto hide after 5 seconds
           setTimeout(() => {
             success.style.opacity = "0";
             setTimeout(() => success.remove(), 500);
           }, 5000);
+
+          // WhatsApp
+          const numeroWhatsApp = "593992382355";
+          const texto = `Hola, soy *${name}* (%0A📧 ${email}) y quiero decir: %0A%0A${message}`;
+          const enlace = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
+          console.log("Abriendo WhatsApp:", enlace);
+          window.open(enlace, "_blank");
         } else {
           alert("❌ Error al enviar. Intenta nuevamente.");
         }
