@@ -1,26 +1,24 @@
 'use strict';
 
-// element toggle function
+// Función para alternar visibilidad
 const elementToggleFunc = function (elem) {
   elem.classList.toggle("active");
 };
 
-// sidebar
+// Sidebar
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-
 if (sidebar && sidebarBtn) {
   sidebarBtn.addEventListener("click", function () {
     elementToggleFunc(sidebar);
   });
 }
 
-// testimonials
+// Modal testimonios
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
-
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
@@ -36,7 +34,6 @@ for (let i = 0; i < testimonialsItem.length; i++) {
     modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
     modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
     modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
     testimonialsModalFunc();
   });
 }
@@ -46,7 +43,7 @@ if (modalCloseBtn && overlay) {
   overlay.addEventListener("click", testimonialsModalFunc);
 }
 
-// select & filter
+// Filtros
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-selecct-value]");
@@ -86,7 +83,6 @@ if (select && selectValue) {
       let selectedValue = this.innerText.toLowerCase();
       selectValue.innerText = this.innerText;
       filterFunc(selectedValue);
-
       if (lastClickedBtn) lastClickedBtn.classList.remove("active");
       this.classList.add("active");
       lastClickedBtn = this;
@@ -94,7 +90,7 @@ if (select && selectValue) {
   }
 }
 
-// FORMULARIO: FORM + WHATSAPP + CONSOLE LOG DEBUG
+// Formulario dual: Formspree + WhatsApp
 const dualForm = document.getElementById("dual-form");
 
 if (dualForm) {
@@ -104,13 +100,7 @@ if (dualForm) {
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
-
     const formData = new FormData(dualForm);
-
-    console.log("Formulario activado");
-    console.log("Nombre:", name);
-    console.log("Email:", email);
-    console.log("Mensaje:", message);
 
     // Enviar a Formspree
     fetch(dualForm.action, {
@@ -131,22 +121,22 @@ if (dualForm) {
           success.style.transition = "opacity 0.5s ease";
           dualForm.parentNode.appendChild(success);
 
-          setTimeout(() => {
-            success.style.opacity = "1";
-          }, 100);
-
+          setTimeout(() => { success.style.opacity = "1"; }, 100);
           setTimeout(() => {
             success.style.opacity = "0";
             setTimeout(() => success.remove(), 500);
           }, 5000);
 
           // WhatsApp
-          
-              const numeroWhatsApp = "593992382355";
-              const texto = `Hola, soy ${name} 👋\n\n📧 Correo: ${email}\n\n📝 Mensaje:\n${message}`;
-              const enlace = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
-               window.open(enlace, "_blank");
+          const numeroWhatsApp = "593992382355";
+          const texto = `Hola, soy ${name} 👋
 
+📧 Correo: ${email}
+
+📝 Mensaje:
+${message}`;
+          const enlace = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
+          window.open(enlace, "_blank");
         } else {
           alert("❌ Error al enviar. Intenta nuevamente.");
         }
@@ -157,7 +147,7 @@ if (dualForm) {
   });
 }
 
-// page navigation
+// Navegación por secciones
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
@@ -170,9 +160,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
         window.scrollTo(0, 0);
       } else {
         pages[j].classList.remove("active");
-        if (navigationLinks[j]) {
-          navigationLinks[j].classList.remove("active");
-        }
+        if (navigationLinks[j]) navigationLinks[j].classList.remove("active");
       }
     }
   });
